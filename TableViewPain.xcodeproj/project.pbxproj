@@ -19,6 +19,9 @@
 		849B1C6D19520DB400CD812B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849B1C5519520DB400CD812B /* UIKit.framework */; };
 		849B1C7519520DB400CD812B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 849B1C7319520DB400CD812B /* InfoPlist.strings */; };
 		849B1C7719520DB400CD812B /* TableViewPainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 849B1C7619520DB400CD812B /* TableViewPainTests.m */; };
+		849B1C8219520EEA00CD812B /* DualTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849B1C8119520EEA00CD812B /* DualTableViewController.m */; };
+		849B1C8519520F1B00CD812B /* DualTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849B1C8419520F1B00CD812B /* DualTableView.m */; };
+		849B1C881952450500CD812B /* MyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849B1C871952450500CD812B /* MyTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,12 @@
 		849B1C7219520DB400CD812B /* TableViewPainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableViewPainTests-Info.plist"; sourceTree = "<group>"; };
 		849B1C7419520DB400CD812B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		849B1C7619520DB400CD812B /* TableViewPainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewPainTests.m; sourceTree = "<group>"; };
+		849B1C8019520EEA00CD812B /* DualTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DualTableViewController.h; sourceTree = "<group>"; };
+		849B1C8119520EEA00CD812B /* DualTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DualTableViewController.m; sourceTree = "<group>"; };
+		849B1C8319520F1B00CD812B /* DualTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DualTableView.h; sourceTree = "<group>"; };
+		849B1C8419520F1B00CD812B /* DualTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DualTableView.m; sourceTree = "<group>"; };
+		849B1C861952450500CD812B /* MyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableView.h; sourceTree = "<group>"; };
+		849B1C871952450500CD812B /* MyTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +118,12 @@
 			children = (
 				849B1C6019520DB400CD812B /* AppDelegate.h */,
 				849B1C6119520DB400CD812B /* AppDelegate.m */,
+				849B1C8019520EEA00CD812B /* DualTableViewController.h */,
+				849B1C8119520EEA00CD812B /* DualTableViewController.m */,
+				849B1C861952450500CD812B /* MyTableView.h */,
+				849B1C871952450500CD812B /* MyTableView.m */,
+				849B1C8319520F1B00CD812B /* DualTableView.h */,
+				849B1C8419520F1B00CD812B /* DualTableView.m */,
 				849B1C6319520DB400CD812B /* Images.xcassets */,
 				849B1C5819520DB400CD812B /* Supporting Files */,
 			);
@@ -241,6 +256,9 @@
 			files = (
 				849B1C6219520DB400CD812B /* AppDelegate.m in Sources */,
 				849B1C5E19520DB400CD812B /* main.m in Sources */,
+				849B1C8219520EEA00CD812B /* DualTableViewController.m in Sources */,
+				849B1C8519520F1B00CD812B /* DualTableView.m in Sources */,
+				849B1C881952450500CD812B /* MyTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
