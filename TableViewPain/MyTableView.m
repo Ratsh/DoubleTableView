@@ -10,9 +10,4 @@
 
 @implementation MyTableView
 
-- (void)reloadData {
-    [super reloadData];
-    NSLog(@"%@", [self indexPathForSelectedRow]);
-}
-
 @end

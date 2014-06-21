@@ -35,13 +35,6 @@
 }
 
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    if (tableView == _mainView.leftTable) {
-        NSLog(@"%f", tableView.contentOffset.y);
-    }
-}
-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     if (scrollView == _mainView.leftTable) {
@@ -62,8 +55,6 @@
     
     NSArray *initValues = [[NSArray alloc] initWithObjects:@"first", @"two", @"three", @"four", @"last", nil];
     
-    //NSLog(@"%i",indexPath.row);
-    //NSLog(@"%i",indexPath.section);
     if (tableView == _mainView.leftTable) {
         cell.textLabel.text = [initValues objectAtIndex:indexPath.row % 4];
         cell.textLabel.text = [cell.textLabel.text stringByAppendingString:@"___"];
