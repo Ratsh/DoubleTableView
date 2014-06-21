@@ -18,11 +18,13 @@
         _leftTable = [MyTableView new];
         _leftTable.transform = CGAffineTransformMakeRotation(M_PI_2);
         _leftTable.showsVerticalScrollIndicator = NO;
+        _leftTable.showsHorizontalScrollIndicator = NO;
         [self addSubview:_leftTable];
         
         _rightTable = [MyTableView new];
         _rightTable.transform = CGAffineTransformMakeRotation(-M_PI_2);
         _leftTable.showsVerticalScrollIndicator = NO;
+        _rightTable.showsHorizontalScrollIndicator = NO;
         [self addSubview:_rightTable];
     }
     
@@ -34,8 +36,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    _leftTable.frame = CGRectMake(10, 20, 150, 400);
-    _rightTable.frame = CGRectMake(150, 20, 150, 400);
+    _leftTable.frame = CGRectMake(8, 20, 150, 400);
+    _rightTable.frame = CGRectMake(162, 20, 150, 400);
     
 }
 
