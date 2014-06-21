@@ -40,27 +40,8 @@
 }
 
 
-/*
-- (void)reloadInputViews {
-    [super reloadInputViews];
-    
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:3 inSection:1];
-    
-    NSLog(@"%ld", (long)[_mainView.leftTable indexPathForSelectedRow].row);
-    
-    [_mainView.leftTable reloadData];
-    [_mainView.leftTable scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-
-}
-*/
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    _selectedIndexPath = indexPath;
-//}
-
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    //NSLog(@"%i", indexPath.row);
+
     if (tableView == _mainView.leftTable) {
         NSLog(@"%f", tableView.contentOffset.y);
     }
@@ -70,32 +51,12 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-   //NSLog(@"%@",scrollView);
     
     if (scrollView == _mainView.leftTable) {
         [_mainView.rightTable setContentOffset:CGPointMake(_mainView.leftTable.contentOffset.x, _mainView.leftTable.contentOffset.y)];
     } else if (scrollView == _mainView.rightTable) {
         [_mainView.leftTable setContentOffset:CGPointMake(_mainView.rightTable.contentOffset.x, _mainView.rightTable.contentOffset.y)];
     }
-    //NSIndexPath *indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
-    //NSIndexPath *indexPath = [(MyTableView *)scrollView indexPathForSelectedRow];
-    //NSIndexPath *indexPath = [_mainView.leftTable ;
-    
-    /*int percentScrolled = abs( (int)ceil((scrollView.contentOffset.y/scrollView.contentSize.height)*100) );
-    UITableViewScrollPosition scrollPos = UITableViewScrollPositionNone;
-    
-    if(percentScrolled > _scrollValue)
-        scrollPos = UITableViewScrollPositionTop;
-    else
-        scrollPos = UITableViewScrollPositionBottom;
-    
-    _scrollValue = percentScrolled;
-*/
-    
-//    [_mainView.leftTable reloadData];
-//    [_mainView.leftTable scrollToRowAtIndexPath:_selectedIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-  //  [_mainView.rightTable scrollToRowAtIndexPath:_selectedIndexPath atScrollPosition:scrollPos animated:YES];
-//}
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -121,9 +82,23 @@
         cell.textLabel.text = [initValues objectAtIndex:(4 - (indexPath.row % 4))];
         cell.textLabel.text = [cell.textLabel.text stringByAppendingString:@"___"];
         cell.textLabel.text = [cell.textLabel.text stringByAppendingFormat:@"%i",indexPath.row];
-        //_selectedIndexPath = indexPath;
     }
     return cell;
+}
+
+//- (BOOL)shouldAutorotate {
+  //  return NO;
+//}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    
+    NSLog(@"olol");
+//    if (UIInterfaceOrientationIsPortrait(fromInterfaceOrientation)) {
+    if (fromInterfaceOrientation == UIInterfaceOrientationPortrait) {
+        [_mainView setBackgroundColor:[UIColor redColor]];
+        [_mainView layoutSubviews];
+    }
 }
 
 
