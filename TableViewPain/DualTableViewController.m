@@ -18,17 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _selectedIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    _scrollValue = 0;
-    
+
     _mainView.leftTable.delegate = self;
     _mainView.leftTable.dataSource = self;
     
     _mainView.rightTable.delegate = self;
     _mainView.rightTable.dataSource = self;
-    
-   
-    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -45,9 +40,6 @@
     if (tableView == _mainView.leftTable) {
         NSLog(@"%f", tableView.contentOffset.y);
     }
-    _selectedIndexPath = indexPath;
-    
-    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -76,8 +68,6 @@
         cell.textLabel.text = [initValues objectAtIndex:indexPath.row % 4];
         cell.textLabel.text = [cell.textLabel.text stringByAppendingString:@"___"];
         cell.textLabel.text = [cell.textLabel.text stringByAppendingFormat:@"%i",indexPath.row];
-        //cell
-        //_selectedIndexPath = indexPath;
     } else {
         cell.textLabel.text = [initValues objectAtIndex:(4 - (indexPath.row % 4))];
         cell.textLabel.text = [cell.textLabel.text stringByAppendingString:@"___"];
@@ -93,11 +83,11 @@
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
     
-    NSLog(@"olol");
+    //NSLog(@"didRotate");
 //    if (UIInterfaceOrientationIsPortrait(fromInterfaceOrientation)) {
     if (fromInterfaceOrientation == UIInterfaceOrientationPortrait) {
         [_mainView setBackgroundColor:[UIColor redColor]];
-        [_mainView layoutSubviews];
+        //[_mainView layoutSubviews];
     }
 }
 

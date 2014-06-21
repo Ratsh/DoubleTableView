@@ -36,8 +36,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    _leftTable.frame = CGRectMake(10, 20, 150, 400);
-    _rightTable.frame = CGRectMake(150, 20, 150, 400);
+    _leftTable.frame = CGRectMake(8, 20, 150, 400);
+    _rightTable.frame = CGRectMake(162, 20, 150, 400);
     
 }
 

@@ -12,7 +12,5 @@
 @interface DualTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 @property (nonatomic) DualTableView *mainView;
-@property (nonatomic) NSIndexPath *selectedIndexPath;
-@property (nonatomic) int scrollValue;
 
 @end
